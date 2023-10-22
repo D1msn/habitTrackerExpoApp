@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/screens/MainScreen.tsx" afterDir="false" />
+    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/MainScreen.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/d1msn/reactNative/habitTracker/node_modules/prettier",
     "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "/Users/d1msn/reactNative/habitTracker/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -65,11 +70,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697980011843</updated>
-      <workItem from="1697980012865" duration="1885000" />
+      <workItem from="1697980012865" duration="2701000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1697982076728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697982076728</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
