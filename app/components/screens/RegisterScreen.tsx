@@ -20,7 +20,6 @@ export const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const auth = FIREBASE_AUTH;
 
   const singUp = async () => {
     if (password !== password2) {
@@ -34,8 +33,8 @@ export const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
 
     setIsLoading(true);
     try {
-      const response = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(response);
+      await createUserWithEmailAndPassword(FIREBASE_AUTH, email, password);
+      navigation.navigate('Login');
     } catch (error) {
       console.log(error);
       alert(error);

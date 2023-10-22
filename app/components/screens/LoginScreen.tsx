@@ -19,13 +19,11 @@ export const LoginScreen = ({ navigation }: AuthScreenProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const auth = FIREBASE_AUTH;
 
   const singIn = async () => {
     setIsLoading(true);
     try {
-      const response = await signInWithEmailAndPassword(auth, email, password);
-      console.log(response);
+      await signInWithEmailAndPassword(FIREBASE_AUTH, email, password);
     } catch (error) {
       console.log(error);
       alert(error);
