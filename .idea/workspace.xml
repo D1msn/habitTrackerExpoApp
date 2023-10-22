@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" afterDir="false" />
+    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="es lint adn types">
+      <change afterPath="$PROJECT_DIR$/app/components/screens/LoginScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/screens/RegisterScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/navigations/private/PrivateLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/navigations/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaseConfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/MainScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/AuthScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -23,11 +26,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -70,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697980011843</updated>
-      <workItem from="1697980012865" duration="2701000" />
+      <workItem from="1697980012865" duration="7617000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1697982076728</created>
@@ -79,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697982076728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="es lint adn types">
+      <created>1697982801460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697982801460</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="es lint adn types" />
+    <option name="LAST_COMMIT_MESSAGE" value="es lint adn types" />
   </component>
 </project>

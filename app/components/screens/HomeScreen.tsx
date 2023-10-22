@@ -1,11 +1,12 @@
-import { Text } from 'react-native';
-import { Button } from 'native-base';
+import { Button, Heading } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
-import { RootStackParamList } from '../../../App';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { FIREBASE_AUTH } from '../../../firebaseConfig';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { PrivateStackParamList } from '../../navigations/types';
 
-type HomeScreenRouteProp = RouteProp<RootStackParamList, 'Home'>;
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+type HomeScreenRouteProp = RouteProp<PrivateStackParamList, 'Home'>;
+type HomeScreenNavigationProp = StackNavigationProp<PrivateStackParamList, 'Home'>;
 
 type HomeScreenProps = {
   route: HomeScreenRouteProp;
@@ -14,9 +15,11 @@ type HomeScreenProps = {
 
 export const HomeScreen = ({ navigation }: HomeScreenProps) => {
   return (
-    <>
-      <Text>Main</Text>
-      <Button onPress={() => navigation.navigate('Auth')}>Go Auth</Button>
-    </>
+    <SafeAreaView>
+      <Heading>Main</Heading>
+      <Button variant={'outline'} onPress={() => FIREBASE_AUTH.signOut()}>
+        Sign Out
+      </Button>
+    </SafeAreaView>
   );
 };
