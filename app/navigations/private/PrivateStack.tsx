@@ -1,7 +1,7 @@
-import { HomeScreen } from '@components/screens/HomeScreen';
+import { HomeScreen } from '@components/screens/private/HomeScreen';
 import { PrivateStackParamList } from '../types';
 import { NavigationContainer } from '@react-navigation/native';
-import { ProfileScreen } from '@components/screens/ProfileScreen';
+import { ProfileScreen } from '@components/screens/private/ProfileScreen';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 
 const Stack = createStackNavigator<PrivateStackParamList>();

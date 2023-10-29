@@ -2,10 +2,10 @@ import { Button, Heading, Input, Spinner, Stack } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useState } from 'react';
-import { FIREBASE_AUTH } from '../../../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { AuthStackParamList } from '@app/navigations/types';
 import { Container } from '@components/ui';
+import { FIREBASE_AUTH } from '@src/firebaseConfig';
 
 type AuthScreenRouteProp = RouteProp<AuthStackParamList, 'Login'>;
 type AuthScreenNavigationProp = StackNavigationProp<AuthStackParamList, 'Login'>;

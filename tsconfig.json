@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
+      "@src/*": ["./*"],
       "@app/*": ["./app/*"],
       "@api/*": ["./app/api/*"],
       "@components/*": ["./app/components/*"],

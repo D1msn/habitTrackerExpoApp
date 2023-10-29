@@ -5,30 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="env file, подключение апи firestore создание экрана профиля">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/habits/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/habits/useGetHabits.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/screens/ProfileScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/layout/Container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/hooks/useAppState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/hooks/useOnlineManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/LoginScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/RegisterScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/RegisterScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/private/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/public/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/ProfileScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/private/ProfileScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/RegisterScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/public/RegisterScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/navigations/auth/AuthStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigations/auth/AuthStack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/navigations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigations/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/navigations/private/PrivateStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigations/private/PrivateStack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/navigations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigations/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/providers/AuthProvider/AuthContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/providers/AuthProvider/AuthContextProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaseConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firebaseConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +66,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components/screens" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/components/screens/public" />
+      <recent name="$PROJECT_DIR$/app/components/screens/private" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697980011843</updated>
       <workItem from="1697980012865" duration="11315000" />
-      <workItem from="1698502570857" duration="21950000" />
+      <workItem from="1698502570857" duration="22750000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1697982076728</created>
@@ -121,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697990143148</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="env file, подключение апи firestore создание экрана профиля">
+      <created>1698582481523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698582481524</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

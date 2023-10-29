@@ -10,10 +10,10 @@ import {
 } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { FIREBASE_AUTH } from '../../../firebaseConfig';
 import { PrivateStackParamList } from '@app/navigations/types';
 import { useAuthContext } from '@app/providers/AuthProvider/AuthContextProvider';
 import { Container } from '@components/ui';
+import { FIREBASE_AUTH } from '@src/firebaseConfig';
 
 type ProfileScreenRouteProp = RouteProp<PrivateStackParamList, 'Profile'>;
 type ProfileScreenNavigationProp = StackNavigationProp<PrivateStackParamList, 'Profile'>;

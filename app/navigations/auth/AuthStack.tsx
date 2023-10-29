@@ -1,7 +1,7 @@
 import { AuthStackParamList } from '../types';
 import { NavigationContainer } from '@react-navigation/native';
-import { LoginScreen } from '@components/screens/LoginScreen';
-import { RegisterScreen } from '@components/screens/RegisterScreen';
+import { LoginScreen } from '@components/screens/public/LoginScreen';
+import { RegisterScreen } from '@components/screens/public/RegisterScreen';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 
 const Stack = createStackNavigator<AuthStackParamList>();
