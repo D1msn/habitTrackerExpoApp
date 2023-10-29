@@ -6,4 +6,5 @@ export type AuthStackParamList = {
 
 export type PrivateStackParamList = {
   Home: undefined;
+  Profile: undefined;
 };

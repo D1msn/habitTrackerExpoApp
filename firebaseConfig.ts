@@ -3,13 +3,14 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCsmzGdOm8Vw1VG5myQgbjsOwArLfUIBvY',
-  authDomain: 'habittracker-ada8f.firebaseapp.com',
-  projectId: 'habittracker-ada8f',
-  storageBucket: 'habittracker-ada8f.appspot.com',
-  messagingSenderId: '242395017664',
-  appId: '1:242395017664:web:32686bc40cf0b7f0cd9825',
-  measurementId: 'G-1HP51Q1WCP',
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.EXPO_PUBLIC_FIREBASE_DATABASE_URL,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 export const FIREBASE_APP = initializeApp(firebaseConfig);

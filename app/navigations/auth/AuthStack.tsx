@@ -1,15 +1,19 @@
-import { createStackNavigator } from '@react-navigation/stack';
 import { AuthStackParamList } from '../types';
 import { NavigationContainer } from '@react-navigation/native';
-import { LoginScreen } from '../../components/screens/LoginScreen';
-import { RegisterScreen } from '../../components/screens/RegisterScreen';
+import { LoginScreen } from '@components/screens/LoginScreen';
+import { RegisterScreen } from '@components/screens/RegisterScreen';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 
 const Stack = createStackNavigator<AuthStackParamList>();
 
 export const AuthStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={'Login'}>
+      <Stack.Navigator
+        initialRouteName={'Login'}
+        screenOptions={{
+          ...TransitionPresets.SlideFromRightIOS,
+        }}>
         <Stack.Screen name={'Login'} component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen
           name={'Register'}

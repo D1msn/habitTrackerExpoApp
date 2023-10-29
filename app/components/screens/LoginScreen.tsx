@@ -4,8 +4,8 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { useState } from 'react';
 import { FIREBASE_AUTH } from '../../../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { AuthStackParamList } from '../../navigations/types';
+import { AuthStackParamList } from '@app/navigations/types';
+import { Container } from '@components/ui';
 
 type AuthScreenRouteProp = RouteProp<AuthStackParamList, 'Login'>;
 type AuthScreenNavigationProp = StackNavigationProp<AuthStackParamList, 'Login'>;
@@ -16,8 +16,8 @@ type AuthScreenProps = {
 };
 
 export const LoginScreen = ({ navigation }: AuthScreenProps) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('test@gmail.com');
+  const [password, setPassword] = useState('123456');
   const [isLoading, setIsLoading] = useState(false);
 
   const singIn = async () => {
@@ -33,31 +33,29 @@ export const LoginScreen = ({ navigation }: AuthScreenProps) => {
   };
 
   return (
-    <SafeAreaView>
-      <Stack px={'15'}>
-        <Heading mt={'5'} textAlign={'center'} size={'md'}>
-          Авторизация
-        </Heading>
-        <Stack space={'xs'} my={50}>
-          <Input onChangeText={setEmail} value={email} variant="rounded" placeholder="Email" />
-          <Input
-            secureTextEntry
-            onChangeText={setPassword}
-            value={password}
-            variant="rounded"
-            placeholder="Пароль"
-          />
-        </Stack>
-        <Stack space={'sm'}>
-          <Button colorScheme={'amber'} variant={'solid'} onPress={singIn}>
-            Войти
-          </Button>
-          <Button variant={'outline'} onPress={() => navigation.navigate('Register')}>
-            Зарегистрироваться
-          </Button>
-        </Stack>
-        {isLoading && <Spinner mt={10} size={'lg'} accessibilityLabel="Loading..." />}
+    <Container>
+      <Heading mt={'5'} textAlign={'center'} size={'md'}>
+        Авторизация
+      </Heading>
+      <Stack space={'xs'} my={50}>
+        <Input onChangeText={setEmail} value={email} variant="rounded" placeholder="Email" />
+        <Input
+          secureTextEntry
+          onChangeText={setPassword}
+          value={password}
+          variant="rounded"
+          placeholder="Пароль"
+        />
       </Stack>
-    </SafeAreaView>
+      <Stack space={'sm'}>
+        <Button colorScheme={'amber'} variant={'solid'} onPress={singIn}>
+          Войти
+        </Button>
+        <Button variant={'outline'} onPress={() => navigation.navigate('Register')}>
+          Зарегистрироваться
+        </Button>
+      </Stack>
+      {isLoading && <Spinner mt={10} size={'lg'} accessibilityLabel="Loading..." />}
+    </Container>
   );
 };

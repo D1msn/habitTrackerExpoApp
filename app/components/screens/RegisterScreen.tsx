@@ -4,8 +4,8 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { useState } from 'react';
 import { FIREBASE_AUTH } from '../../../firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { AuthStackParamList } from '../../navigations/types';
+import { AuthStackParamList } from '@app/navigations/types';
+import { Container } from '@components/ui';
 
 type RegisterScreenRouteProp = RouteProp<AuthStackParamList, 'Register'>;
 type RegisterScreenNavigationProp = StackNavigationProp<AuthStackParamList, 'Register'>;
@@ -44,40 +44,38 @@ export const RegisterScreen = ({ navigation }: RegisterScreenProps) => {
   };
 
   return (
-    <SafeAreaView>
-      <Stack px={'15'}>
-        <Heading mt={'5'} textAlign={'center'} size={'md'}>
-          Регистрация
-        </Heading>
-        <Stack space={'xs'} my={50}>
-          <Input onChangeText={setEmail} value={email} variant="rounded" placeholder="Email" />
-          <Input
-            secureTextEntry
-            onChangeText={setPassword}
-            value={password}
-            variant="rounded"
-            placeholder="Пароль"
-          />
-          <Input
-            secureTextEntry
-            onChangeText={setPassword2}
-            value={password2}
-            variant="rounded"
-            placeholder="Пароль"
-          />
-        </Stack>
-
-        <Stack space={'sm'}>
-          <Button colorScheme={'amber'} onPress={singUp}>
-            Зарегистрироваться
-          </Button>
-          <Button variant={'outline'} onPress={() => navigation.navigate('Login')}>
-            Войти
-          </Button>
-        </Stack>
-
-        {isLoading && <Spinner mt={10} size={'lg'} accessibilityLabel="Loading..." />}
+    <Container>
+      <Heading mt={'5'} textAlign={'center'} size={'md'}>
+        Регистрация
+      </Heading>
+      <Stack space={'xs'} my={50}>
+        <Input onChangeText={setEmail} value={email} variant="rounded" placeholder="Email" />
+        <Input
+          secureTextEntry
+          onChangeText={setPassword}
+          value={password}
+          variant="rounded"
+          placeholder="Пароль"
+        />
+        <Input
+          secureTextEntry
+          onChangeText={setPassword2}
+          value={password2}
+          variant="rounded"
+          placeholder="Пароль"
+        />
       </Stack>
-    </SafeAreaView>
+
+      <Stack space={'sm'}>
+        <Button colorScheme={'amber'} onPress={singUp}>
+          Зарегистрироваться
+        </Button>
+        <Button variant={'outline'} onPress={() => navigation.navigate('Login')}>
+          Войти
+        </Button>
+      </Stack>
+
+      {isLoading && <Spinner mt={10} size={'lg'} accessibilityLabel="Loading..." />}
+    </Container>
   );
 };

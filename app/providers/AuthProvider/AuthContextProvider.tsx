@@ -1,27 +1,37 @@
 import React, { createContext, useContext } from 'react';
 import { User } from '@firebase/auth';
-import { useAuth } from '../../hooks/useAuth';
+import { Spinner } from 'native-base';
 
 type authContextType = {
-  userInfo: User | undefined;
+  userInfo: User;
 };
 
 const defaultContextValue: authContextType = {
-  userInfo: undefined,
+  userInfo: {} as User,
 };
 
-const AuthContext = createContext(defaultContextValue);
+export const AuthContext = createContext(defaultContextValue);
 export const useAuthContext = () => useContext(AuthContext);
 
-export const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const { user } = useAuth();
-
+export const AuthContextProvider = ({
+  children,
+  user,
+}: {
+  children: React.ReactNode;
+  user: User;
+}) => {
   return (
-    <AuthContext.Provider
-      value={{
-        userInfo: user,
-      }}>
-      {children}
-    </AuthContext.Provider>
+    <>
+      {user ? (
+        <AuthContext.Provider
+          value={{
+            userInfo: user,
+          }}>
+          {children}
+        </AuthContext.Provider>
+      ) : (
+        <Spinner top={'50%'} size={'lg'} />
+      )}
+    </>
   );
 };

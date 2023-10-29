@@ -1,10 +1,10 @@
-import { Button, Heading } from 'native-base';
+import { Divider, Flex, HamburgerIcon, IconButton, Spinner, Text, View, VStack } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { FIREBASE_AUTH } from '../../../firebaseConfig';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { PrivateStackParamList } from '../../navigations/types';
-import { useAuth } from '../../hooks/useAuth';
+import { PrivateStackParamList } from '@app/navigations/types';
+import { useGetHabits } from '@api/habits/useGetHabits';
+import { useAuthContext } from '@app/providers/AuthProvider/AuthContextProvider';
+import { Container } from '@components/ui';
 
 type HomeScreenRouteProp = RouteProp<PrivateStackParamList, 'Home'>;
 type HomeScreenNavigationProp = StackNavigationProp<PrivateStackParamList, 'Home'>;
@@ -15,15 +15,50 @@ type HomeScreenProps = {
 };
 
 export const HomeScreen = ({ navigation }: HomeScreenProps) => {
-  const { user } = useAuth();
+  const { userInfo } = useAuthContext();
+  const { habitsResponse, isLoading } = useGetHabits(userInfo?.uid);
+  console.log(habitsResponse, 'haaaaaabits');
+
   return (
-    <SafeAreaView>
-      <Heading my={5} textAlign={'center'}>
-        {user?.email}
-      </Heading>
-      <Button variant={'outline'} onPress={() => FIREBASE_AUTH.signOut()}>
-        Sign Out
-      </Button>
-    </SafeAreaView>
+    <Container>
+      <Flex direction={'row'} justifyContent={'flex-end'}>
+        <IconButton
+          size={'lg'}
+          onPress={() => navigation.navigate('Profile')}
+          icon={<HamburgerIcon />}
+          _icon={{
+            color: 'white',
+          }}
+        />
+      </Flex>
+
+      <View flex={1}>
+        {isLoading || !habitsResponse ? (
+          <Spinner />
+        ) : (
+          <>
+            <Text>Всего привычек: {habitsResponse.totalCount}</Text>
+            <VStack>
+              {habitsResponse.habits.map((item) => (
+                <VStack py={5} key={item.title}>
+                  <Divider mb={2} />
+                  <Flex>
+                    <Text>{item.title}</Text>
+                    <Text
+                      style={{
+                        color: 'gray',
+                      }}
+                      fontSize="xs">
+                      {item.description}
+                    </Text>
+                  </Flex>
+                  <Divider mt={2} />
+                </VStack>
+              ))}
+            </VStack>
+          </>
+        )}
+      </View>
+    </Container>
   );
 };
