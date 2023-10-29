@@ -21,8 +21,10 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
 
   return (
     <Container>
-      <Flex direction={'row'} justifyContent={'flex-end'}>
+      <Flex direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
+        {habitsResponse && <Text fontSize={'xs'}>Всего привычек: {habitsResponse.totalCount}</Text>}
         <IconButton
+          ml={'auto'}
           size={'lg'}
           onPress={() => navigation.navigate('Profile')}
           icon={<HamburgerIcon />}
@@ -37,19 +39,20 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
           <Spinner />
         ) : (
           <>
-            <Text>Всего привычек: {habitsResponse.totalCount}</Text>
             <VStack>
-              {habitsResponse.habits.map((item) => (
-                <VStack py={5} key={item.title}>
+              {habitsResponse.habits.map((habit) => (
+                <VStack py={5} key={habit.title}>
                   <Divider mb={2} />
                   <Flex>
-                    <Text>{item.title}</Text>
+                    <Text onPress={() => navigation.navigate('HabitDetail', { habit })}>
+                      {habit.title}
+                    </Text>
                     <Text
                       style={{
                         color: 'gray',
                       }}
                       fontSize="xs">
-                      {item.description}
+                      {habit.description}
                     </Text>
                   </Flex>
                   <Divider mt={2} />

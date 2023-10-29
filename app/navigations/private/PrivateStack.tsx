@@ -3,6 +3,7 @@ import { PrivateStackParamList } from '../types';
 import { NavigationContainer } from '@react-navigation/native';
 import { ProfileScreen } from '@components/screens/private/ProfileScreen';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { HabitDetailScreen } from '@components/screens/private/HabitDetailScreen';
 
 const Stack = createStackNavigator<PrivateStackParamList>();
 
@@ -17,6 +18,13 @@ export const PrivateStack = () => {
         <Stack.Screen
           name={'Profile'}
           component={ProfileScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name={'HabitDetail'}
+          component={HabitDetailScreen}
           options={{
             headerShown: false,
           }}
