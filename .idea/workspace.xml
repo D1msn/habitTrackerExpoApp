@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="добавление экрана создания привычки">
-      <change afterPath="$PROJECT_DIR$/app/api/habits/enums.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/types.ts" afterDir="false" />
+    <list default="true" id="640af2a1-747a-4e42-a8b5-d2cb13f4a6e3" name="Changes" comment="добавление создание привычки, генерация id">
+      <change afterPath="$PROJECT_DIR$/app/api/habits/firebase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/habits/hooks/useAddHabits.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/queryKeys.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/habits/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/habits/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/habits/useGetHabits.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/habits/hooks/useGetHabits.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/private/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/private/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/screens/private/habit/HabitCreateScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/private/habit/HabitCreateScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/screens/public/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/public/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/screens/private/habit/HabitDetailScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/screens/private/habit/HabitDetailScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ui/HabitItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ui/HabitItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ui/layout/GoBackHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ui/layout/GoBackHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -47,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/d1msn/reactNative/habitTracker/app/components/screens/private/habit",
+    "last_opened_file_path": "/Users/d1msn/reactNative/habitTracker/app/api/habits/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,16 +68,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api/habits/hooks" />
       <recent name="$PROJECT_DIR$/app/components/screens/private/habit" />
       <recent name="$PROJECT_DIR$/app/components/screens/private" />
       <recent name="$PROJECT_DIR$/app/components/screens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api/habits/hooks" />
       <recent name="$PROJECT_DIR$/app/components/screens/private/habit" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/components/screens/public" />
-      <recent name="$PROJECT_DIR$/app/components/screens/private" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +91,7 @@
       <updated>1697980011843</updated>
       <workItem from="1697980012865" duration="11315000" />
       <workItem from="1698502570857" duration="29163000" />
-      <workItem from="1698681648823" duration="5162000" />
+      <workItem from="1698681648823" duration="11928000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1697982076728</created>
@@ -143,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698684417125</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="добавление экрана создания привычки">
+      <created>1698687124022</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698687124022</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +182,7 @@
     <MESSAGE value="перенос" />
     <MESSAGE value="страница деталки" />
     <MESSAGE value="добавление экрана создания привычки" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление экрана создания привычки" />
+    <MESSAGE value="добавление создание привычки, генерация id" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление создание привычки, генерация id" />
   </component>
 </project>

@@ -8,6 +8,7 @@ export type HabitsResponse = {
 type HabitType = 'simple';
 
 export type Habit = {
+  id: string;
   title: string;
   startDate: string;
   streak: number;

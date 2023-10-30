@@ -1,13 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import { doc, getDoc } from 'firebase/firestore';
-import { FIRESTORE_DB } from '../../../firebaseConfig';
+import { getDoc } from 'firebase/firestore';
 import { HabitsResponse } from '@api/habits/types';
-
-export const getHabitsDoc = (userId: string) => doc(FIRESTORE_DB, 'habits', userId);
+import { getHabitsDoc } from '@api/habits/firebase';
+import { QUERY_KEYS } from '@app/utils/queryKeys';
 
 export function useGetHabits(userId: string) {
   const { data: habitsResponse, isLoading } = useQuery<HabitsResponse>(
-    ['habits', userId],
+    [QUERY_KEYS.Habits, userId],
     async () => {
       const docRef = await getHabitsDoc(userId);
       const docSnap = await getDoc(docRef);

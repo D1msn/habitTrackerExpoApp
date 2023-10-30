@@ -2,17 +2,18 @@ import {
   AddIcon,
   Flex,
   HamburgerIcon,
+  Heading,
   HStack,
   IconButton,
+  ScrollView,
   Spinner,
   Text,
-  View,
   VStack,
 } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { PrivateStackParamList } from '@app/navigations/types';
-import { useGetHabits } from '@api/habits/useGetHabits';
+import { useGetHabits } from '@api/habits/hooks/useGetHabits';
 import { useAuthContext } from '@app/providers/AuthProvider/AuthContextProvider';
 import { Container } from '@components/ui';
 import { HabitItem } from '@components/ui/HabitItem';
@@ -28,12 +29,16 @@ type HomeScreenProps = {
 export const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const { userInfo } = useAuthContext();
   const { habitsResponse, isLoading } = useGetHabits(userInfo?.uid);
-  console.log(habitsResponse, 'haaaaaabits');
 
   return (
     <Container>
       <Flex height={70} direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
-        {habitsResponse && <Text fontSize={'xs'}>Всего привычек: {habitsResponse.totalCount}</Text>}
+        <VStack>
+          <Heading>Привычки</Heading>
+          {habitsResponse && (
+            <Text fontSize={'xs'}>Всего привычек: {habitsResponse.totalCount}</Text>
+          )}
+        </VStack>
 
         <HStack space={'xs'} ml={'auto'} direction={'row'}>
           <IconButton
@@ -56,12 +61,12 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
         </HStack>
       </Flex>
 
-      <View flex={1}>
+      <VStack space={'xs'} flex={1}>
         {isLoading || !habitsResponse ? (
           <Spinner />
         ) : (
-          <>
-            <VStack>
+          <ScrollView marginLeft={-15} marginRight={-15}>
+            <VStack space={'xs'}>
               {habitsResponse.habits.map((habit) => (
                 <HabitItem
                   key={habit.title + habit.startDate}
@@ -70,9 +75,9 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
                 />
               ))}
             </VStack>
-          </>
+          </ScrollView>
         )}
-      </View>
+      </VStack>
     </Container>
   );
 };
