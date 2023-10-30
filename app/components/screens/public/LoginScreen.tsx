@@ -1,4 +1,4 @@
-import { Button, Heading, Input, Spinner, Stack } from 'native-base';
+import { Button, Heading, Input, Stack } from 'native-base';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useState } from 'react';
@@ -48,14 +48,16 @@ export const LoginScreen = ({ navigation }: AuthScreenProps) => {
         />
       </Stack>
       <Stack space={'sm'}>
-        <Button colorScheme={'amber'} variant={'solid'} onPress={singIn}>
+        <Button isLoading={isLoading} colorScheme={'amber'} variant={'solid'} onPress={singIn}>
           Войти
         </Button>
-        <Button variant={'outline'} onPress={() => navigation.navigate('Register')}>
+        <Button
+          disabled={isLoading}
+          variant={'outline'}
+          onPress={() => navigation.navigate('Register')}>
           Зарегистрироваться
         </Button>
       </Stack>
-      {isLoading && <Spinner mt={10} size={'lg'} accessibilityLabel="Loading..." />}
     </Container>
   );
 };
