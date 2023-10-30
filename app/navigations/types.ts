@@ -12,4 +12,5 @@ export type PrivateStackParamList = {
   HabitDetail: {
     habit: Habit;
   };
+  HabitCreate: undefined;
 };
